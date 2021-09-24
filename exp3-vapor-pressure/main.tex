@@ -36,7 +36,7 @@
 \pagestyle{fancy}
 \fancypagestyle{preContent}{
     \fancyhead[L]{\zihao{-5} 物理化学实验}
-    \fancyhead[C]{\zihao{-5} 实验xx\ \ xxxxx}
+    \fancyhead[C]{\zihao{-5} 实验三\ \ 液体饱和蒸气压的测定}
     \fancyhead[R]{\zihao{-5} 1800011716\ 王崇斌}
 }
 \pagestyle{preContent}
@@ -44,7 +44,7 @@
 %	设置首页页眉页脚
 \fancypagestyle{plain}{
 	\fancyhead[L]{\zihao{-5} 物理化学实验}
-	\fancyhead[C]{\zihao{-5} 实验xx\ \ xxxxx}
+	\fancyhead[C]{\zihao{-5} 实验三\ \ 液体饱和蒸气压的测定}
 	\fancyhead[R]{\zihao{-5} 1800011716\ 王崇斌}
 	\cfoot{}
 }
@@ -99,7 +99,7 @@
         \begin{center}
             \begin{tabular}{cp{14.1cm}}
                 % 题目
-                \addcell[2]{题目：\ } & \addcell[2]{xxxxxx} \\
+                \addcell[2]{题目：\ } & \addcell[2]{液体饱和蒸气压的测定} \\
                 \cline{2-2}
             \end{tabular}
         \end{center}
@@ -114,16 +114,19 @@
                 \addcell{学\phantom{空格}号：\ } & \addcell{1800011716}\\
                 \cline{2-2}
                 % 组别
-                \addcell{组\phantom{空格}别：\ } & \addcell{11组} \\
+                \addcell{组\phantom{空格}别：\ } & \addcell{19组} \\
                 \cline{2-2}
                 % 实验日期
-                \addcell{实验日期：\ } & \addcell{2020.xx.xx}\\
+                \addcell{实验日期：\ } & \addcell{2021.09.23}\\
                 \cline{2-2}
                 % 室温
-                \addcell{室\phantom{空格}温：\ } & \addcell{xxx.xx\ K}\\
+                \addcell{室\phantom{空格}温：\ } & \addcell{197.26\ K}\\
                 \cline{2-2}
                 % 大气压强
-                \addcell{大气压强：\ } & \addcell{xxx.xx\ kPa}\\
+                \addcell{大气压强：\ } & \addcell{101.18\ kPa
+				\footnote{这个是动态法测定水的实验中测量的大气压，在静态法测定四氯化碳
+				的实验中测得的气压为101.07Kpa}
+				}\\
                 \cline{2-2}
             \end{tabular}
             \begin{tabular*}{\textwidth}{c}
@@ -135,40 +138,67 @@
             \end{tabular*}
         \end{center}
         % 摘要
-        \textsf{摘\ \ 要}\ \ 本实验通过...，利用...，得到了...，比较了...，从而初步了解了...。
+        \textsf{摘\ \ 要}\ \ 本实验使用静态法测定不同温度下\ce{CCl4}的饱和蒸气压;
+		使用动态法测定水在不同压力下的沸点。利用
+		Clausius-Clapeyron方程拟合实验结果，得到\ce{CCl4}和水的$\Delta_{vap}H_{m}$分别为
+		$31.43 \pm 0.07\,\mr{kJ/mol}$和$41.20 \pm 0.09\,\mr{kJ/mol}$。
+		在$p = 101.3\mr{kPa}$下的沸点分别为$76.03\celsius$和$99.73\celsius$；
+		摩尔气化熵分别为$90.01\,\mr{J/(mol\,K)}$和$110.50\,\mr{J/(mol\,K)}$。
+		由实验结果知，\ce{CCl4}对Trouton规则符合得较好，而水产生了明显的正偏差，
+		其原因是氢键的存在使得液态水中形成了有序结构，降低了液态水的熵。
         \\
         \\
         % 关键字
-        \textsf{关键词}\ \ xxx；xxx；xxx；xxx
+        \textsf{关键词}\ \ Clapeyron方程；饱和蒸汽压；沸点
     \end{titlepage}
-
-    \section{引言}
-	引言部分...
-               
 	\vbox{}        
     \section{实验部分}
     	\subsection{仪器和试剂}
-    	仪器和试剂...
+    	\begin{enumerate}
+			\item 试剂：\ce{CCl4}，二次去离子水
+			\item 仪器：数字式温度-压力测定仪，电加热器，循环水真空泵，冷凝水循环系统，真空缓冲罐，磁力搅拌器等
+		\end{enumerate}
     	
-    	 \subsection{实验内容}
-			\subsubsection{实验内容1}
-			实验内容1...
-			\subsubsection{实验内容2}
-		实验内容2...
-			\subsubsection{实验内容3}
-			实验内容3...
-			\subsubsection{实验内容4}
-			实验内容4...
-			\subsubsection{实验内容5}
-			实验内容5...
-    	
+		\subsection{实验步骤}
+			首先在电脑上安装读取、记录数据的驱动程序，将数字式温度-压力测定仪与电脑连接，调试。
+			\subsubsection{静态法测定\ce{CCl4}的饱和蒸汽压}
+			按照讲义指导搭建实验装置。首先进行检漏：打开抽气阀门，装置减压至$50\mr{kPa}$左右，关闭抽气阀门，
+			如果3min内气压的变化不超过$0.1\mr{kPa}$，说明气密性良好。\\
+			开平衡阀通大气，加热至$80\celsius$左右使\ce{CCl4}沸腾，观察到剧烈冒泡；加热过程中，
+			c管中的空气逐渐被压入b管排出。关闭加热，观察到沸腾停止，随后b管液面下降，bc两管中液面逐渐接近，
+			待c管中无气泡且液面与b管液面水平时，按下“Hold”键，记下压强值和温度值，重复3次，如果度数接近，
+			说明空气排尽。\\
+			不断降低装置内压力，每次约降低$5\mr{kPa}$，随后测定液面水平时的压强值和温度值，
+			直到压力降到约为$50\mr{kPa}$。
+
+			\subsubsection{动态法测定水的饱和蒸汽压}
+			在两口烧瓶中盛入约200 mL的去离子水。在各个玻璃接口处涂抹真空脂，按照讲义连接装置，
+			使温度探头的前端与水面相切，同前述方法检查气密性。打开冷凝水，
+			减压至示数为$50\mr{kPa}$左右，搅拌加热至沸腾，温度和压力稳定后记录数值。
+			然后逐渐升高压力(每次约5 kPa)，重复记录数据至与大气连通，大气压下的沸点测三次。
+
 	\vbox{}  
 	\section{数据与结果}
- 		\subsection{实验数据记录及处理}
- 		\subsubsection{实验内容1}
- 		实验内容1...
- 		
- 		 \begin{figure}[h]
+ 		\subsection{实验原始数据记录及处理}
+ 		\subsubsection{静态法测定\ce{CCl4}的饱和蒸汽压}
+		装置检漏的数据参见表\ref{static detection}。
+		\begin{table}[h]
+			\centering
+			\zihao{5}
+			\bicaption{装置检漏时的气压记录}{pressure document in leak detection}
+			\begin{tabular}{ccc}
+				\toprule
+				时间 & P/kPa & T$\celsius$ \\
+				\midrule
+				12:55 & 49.75 & 22.75  \\
+				12:57 & 49.81 & 22.74  \\
+				12:58 & 49.84 & 22.74  \\
+				\bottomrule
+			\end{tabular}
+			\label{static detection}
+		\end{table}
+		可以认为装置在实验过程中不漏气。随
+ 		\begin{figure}[h]
  			\centering
  			\includegraphics[width=0.5\textwidth]{pku.png}
  			\bicaption{中文图题}{Caption}
@@ -192,29 +222,15 @@
  				\bottomrule
  			\end{tabular}
  		\end{table}
- 	\vbox{}
- 		\subsubsection{实验内容2}
-		实验内容2...
-		\subsubsection{实验内容3}
-		实验内容3...
-		\subsubsection{实验内容4}
-		实验内容4...
-		\subsubsection{实验内容5}
-		实验内容5...
- 		$$ E_{total}=E_{trans}+E_{rot}+E_{vib}+E_{elec} $$ 
- 	
- 		$$ 1\ \ {\rm a.u.}=2625.50 \ \ {\rm kJ \cdot mol^{-1}} $$
- 		$$\Delta E_{total}=E_{total}({\rm nap})-E_{total}{\rm (azu)=-1.4\times10^{2} \ \ kJ \cdot mol^{-1} }$$
+ 		\vbox{}
+ 		\subsubsection{动态法测定水的饱和蒸汽压}
+
  	
  		参考值\citealp{dean1992lange} 
- 		$$\mu=1.66\ \ {\rm D}$$
- 		实验值\citealp{Bast2009,Konecny2019}
- 		$$E_{\rm Zn}=5.80 \ \ {\rm eV}\ \ \ \ \ \ \ E_{\rm Cu}=1.39\ \ {\rm eV}$$
- 		
- 		
- 		\subsection{实验结果及分析}
- 		\subsubsection{实验内容1}
- 		实验内容1...
+
+ 		\subsection{实验结果}
+ 		\subsubsection{静态法测定\ce{CCl4}的饱和蒸汽压}
+ 		\subsubsection{动态法测定水的饱和蒸汽压}
  		
  		
 
@@ -226,9 +242,6 @@
  	 	实验讨论1...
  	 	\subsubsection{实验讨论2}
  	 	实验讨论2...
- 	 	\subsubsection{实验讨论3}
- 		实验讨论3...
- 	 
  	 	\subsection{实验结论}
  	 	实验结论...
 
